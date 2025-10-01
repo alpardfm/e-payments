@@ -1,0 +1,92 @@
+{
+    "Meta": {
+        "Title": "E-Payment API",
+        "Description": "E-Payment API Collection",
+        "Host": "localhost:3001",
+        "Basepath": "/",
+        "Version": "localhost"
+    },
+    "Gin": {
+        "Host": "localhost",
+        "Port": "3001",
+        "Mode": "debug",
+        "Timeout": "100s",
+        "ShutdownTimeout": "10s",
+        "LogRequest": "true",
+        "LogResponse": "true",
+        "CORS": {
+            "Mode": "allowall"
+        },
+        "Swagger": {
+            "Basicauth": {
+                "Password": "swagger",
+                "Username": "alpardfm"
+            },
+            "Enabled": "true",
+            "Path": "/swagger"
+        },
+        "Platform": {
+            "BasicAuth": {
+                "Password": "platform",
+                "Username": "alpardfm"
+            },
+            "Enabled": "true",
+            "Path": "/platform"
+        }
+    },
+    "Log": {
+        "Level": "debug"
+    },
+    "SQL": {
+        "Driver": "mysql",
+        "Follower": {
+            "Host": "localhost",
+            "Port": "3306",
+            "DB": "epayment",
+            "User": "root",
+            "Password": "rootpassword",
+            "SSL": null,
+            "Schema": null,
+            "Options": {
+                "MaxLifeTime": null,
+                "MaxIdle": null,
+                "MaxOpen": null
+            }
+        },
+        "Leader": {
+            "Host": "localhost",
+            "Port": "3306",
+            "DB": "epayment",
+            "User": "root",
+            "Password": "rootpassword",
+            "SSL": null,
+            "Schema": null,
+            "Options": {
+                "MaxLifeTime": null,
+                "MaxIdle": null,
+                "MaxOpen": null
+            }
+        }
+    },
+    "Parser": {
+        "JSONOptions": {
+            "Config": "default",
+            "IndentionStep": "0",
+            "MarshalFloatWith6Digits": false,
+            "EscapeHTML": true,
+            "SortMapKeys": false,
+            "UseNumber": true,
+            "DisallowUnknownFields": false,
+            "TagKey": "json",
+            "OnlyTaggedField": true,
+            "ValidateJSONRawMessage": true,
+            "ObjectFieldMustBeSimpleString": false,
+            "CasesenSitive": true
+        }
+    },
+    "JWT": {
+        "JWTTokenExpirationInMinute": 2592000,
+        "DashboardJWTTokenExpirationMinute": 3600,
+        "JWTTokenKey": "12345678901234567890123456789012"
+    }
+}
